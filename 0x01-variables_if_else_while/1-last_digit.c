@@ -1,67 +1,32 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
-
-
-/**
-
- * main - program that prints the numbers from 00 to 99
-
- * Numbers must be separated by ,followed by a space
-
- * Numbers should be printed in ascending order with 2 digits
-
- * You can only use the putchar function
-
+/** 
+ * main - assign a random number to the variable n each time it is executed
+ * The string Last digit of n
  * Return: 0
-
  */
 
-
-
 int main(void)
-
 {
+int n; 
+in lastn;
 
-int n1 = 48;
-
-int n2 = 48;
-
-int com = 44;
-
-while (n1 <= 57)
-
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+lastn = n % 10;
+if (lastn > 5)
 {
-
-n2 = 48;
-
-while (n2 <= 57)
-
-{
-
-putchar(n1);
-
-putchar(n2);
-
-if (n1 != 57 || n2 != 57)
-
-{
-
-putchar(com);
-
-putchar(32);
-
+printf("Last digit of %d is %d and is greater than 5\n", n, lastn);
 }
-
-n2 += 1;
-
+else if (lastn == 0)
+{
+printf("Last digit of %d is %d and is 0\n", n, lastn);
 }
-
-n1 += 1;
-
+else if (lastn < 6 && lastn != 0)
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastn);
 }
-
-putchar('\n');
-
 return (0);
-
 }
