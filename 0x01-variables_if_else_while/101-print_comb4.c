@@ -1,5 +1,5 @@
 #include <stdio.h>
-/**
+/** 
  *main - Prints all combinations of three digits with,
  * and space followed by new line
  *
@@ -26,8 +26,7 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 			}
-		}	
-	}	
+		}
+	}
 	putchar('\n');
 	return (0);
-}
