@@ -1,24 +1,22 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <ctype.h>
 /**
- * main - Entry point
- * Description: Print base 16 numbers
- * Return: Always 0 (success)
+ *main - Prints all single digits with , and space followed by new line
+ *
+ *Return: returns 0
  */
-
 int main(void)
 {
-	char c;
-	char d = '0';
+	int digit;
 
-	while (d <= '9')	
-	{		
-		putchar(d);
-		d++;
-	}
-	for (c = 'a'; c <= 'f'; c++)
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		putchar(c);
+		putchar(digit);
+		if (digit == '9')
+			continue;
+
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
