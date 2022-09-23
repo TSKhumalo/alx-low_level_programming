@@ -1,1 +1,1 @@
-Write a function that capitalizes all words of a string.
+Write a function that prints an integer.
